@@ -1,0 +1,45 @@
+.profile__detials--heading {
+  font-size: 2rem;
+  font-weight: 300;
+  padding: 2rem 0;
+}
+
+.profile__detials--heading--span {
+  font-weight: 700;
+  font-size: 3rem !important;
+
+}
+
+.container {
+  padding: 4rem 0;
+}
+
+
+
+#profile__personal--details {
+  font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+#profile__personal--details td,
+#profile__personal--details th {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+#profile__personal--details tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+#profile__personal--details tr:hover {
+  background-color: #ddd;
+}
+
+#profile__personal--details th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: #4CAF50;
+  color: white;
+}

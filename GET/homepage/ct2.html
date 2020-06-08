@@ -1,0 +1,14 @@
+<div class="container">
+  <h2 class="profile__detials--heading">
+    <span class="profile__detials--heading--span">CT -2 </span> Results</h2>
+  <table id="ct__table">
+    <tr>
+      <th>Subject</th>
+      <th>Grade / Marks</th>
+    </tr>
+    <tr ng-repeat="x in subjects">
+      <td>{{x.name}}</td>
+      <td>{{x.marks}}</td>
+    </tr>
+  </table>
+</div>

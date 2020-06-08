@@ -1,0 +1,206 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400;
+}
+
+p {
+  line-height: 1.6;
+  font-weight: 700;
+  font-size: 110%;
+  letter-spacing: 1.2px;
+}
+
+.header {
+  height: 93.2vh;
+  background-image: linear-gradient(to top, rgba(200, 80, 192, .3), rgba(200, 80, 192, .7), rgba(200, 80, 192, .7), rgba(200, 80, 192, .7), rgba(200, 80, 192, .3)), url("img/alfons-morales-YLSwjSy7stw-unsplash.jpg");
+  background-size: 100% 100%;
+  clip-path: polygon(0 0, 100% 0, 100% 80%, 50% 100%, 0% 80%, 0 0);
+  background-repeat: no-repeat;
+  position: relative;
+}
+
+.navbar {
+  background-color: transparent;
+}
+
+.nav-link {
+  font-weight: 700;
+  font-size: 110%;
+  color: #666 !important;
+}
+
+.nav-link:hover {
+  color: #222 !important;
+}
+
+.navbar-brand {
+  letter-spacing: 3px;
+  font-weight: 700;
+  font-size: 150% !important;
+}
+
+/* .header-section {} */
+
+.center-div {
+  text-align: center;
+  position: absolute;
+  top: 45%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  line-height: 1.7;
+}
+
+.header-heading {
+  font-weight: 700;
+  font-size: 250%;
+  letter-spacing: 3px;
+  margin-bottom: 10px;
+}
+
+.header-button {
+  font-weight: 700;
+  background-image: linear-gradient(45deg, rgba(200, 80, 192, 1), rgba(65, 88, 208, 1));
+  padding: 12px 35px;
+  color: white;
+  border: 1px solid transparent;
+  border-radius: 100px;
+  transition: all .3s;
+  box-shadow: 0 2rem 1rem rgba(0, 0, 0, .5);
+}
+
+.header-button:hover {
+  color: #333;
+  border: .1px solid white;
+  box-shadow: 0 2rem 2rem rgba(0, 0, 0, .8);
+}
+
+.para-thin {
+  line-height: 1.6;
+  font-weight: 300;
+  font-size: 110%;
+  letter-spacing: 1.2px;
+}
+
+.header-extradiv {
+  padding: 100px 20px;
+}
+
+.extradiv {
+  padding: 50px;
+  border-radius: 3px;
+  transition: all .3s;
+
+}
+
+.extradiv:hover {
+  transform: translatey(-4px);
+  box-shadow: 0 2rem 3rem rgba(0, 0, 0, .6);
+}
+
+.font__awesome {
+  font-size: 50px;
+  margin: 40px 0;
+}
+
+.fa-envira {
+  color: lightgreen;
+}
+
+.fa-trophy {
+  color: #bd993b;
+}
+
+.fa-space-shuttle {
+  color: #ede23e;
+}
+
+.contactus {
+  margin-top: 20px;
+  padding: 90px 0;
+  /* clip-path: polygon(0 0, 100% 0, 100% 100%, 0 80%, 0 0); */
+  background-image: linear-gradient(-135deg, rgba(200, 80, 192, .5), rgba(200, 80, 192, .8), rgba(200, 80, 192, .5));
+}
+
+.contactus__heading {
+  padding-bottom: 40px;
+  font-weight: inherit;
+}
+
+
+.span-address {
+  display: block;
+  font-weight: 300;
+  font-size: 20px;
+}
+
+
+.contactus__email {
+  padding: 60px 0;
+}
+
+.contactus__email input {
+  background-color: transparent;
+  outline: none;
+  border: none;
+  border-bottom: 2px solid rgba(200, 80, 192, 1);
+  color: black;
+}
+
+.newsletter__heading {
+  padding-bottom: 15px;
+}
+
+.newsletter__button {
+  margin-top: 40px;
+  padding: 12px 50px;
+  box-shadow: 0 2rem 2rem rgba(0, 0, 0, .3);
+}
+
+/* 
+.aboutus {
+  background-image: linear-gradient(45deg, rgba(69, 104, 220, .5), rgba(200, 80, 192, .8), rgba(69, 104, 220, .5));
+  padding: 60px 0;
+  /* margin-bottom: 40px; }*/
+.aboutus__para {
+  font-size: 20px;
+  font-weight: 300;
+}
+
+.aboutus__span {
+  font-weight: 400;
+  font-size: 25px;
+  display: block;
+  /* text-align: center; */
+  padding: 8px 0;
+}
+
+ #myBtn {
+  display: none;
+  position: fixed;
+  z-index: 20;
+  background-color: #c850c0;
+  bottom: 30px;
+  right: 30px;
+  font-size: 40px;
+  border-radius: 8px;
+  padding: 8px;
+  transition: all .2s;
+  cursor: pointer;
+}
+
+#myBtn:hover {
+  color: white;
+}

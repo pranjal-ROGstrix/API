@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js">
+	</script>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.9/angular.min.js"></script>
+	<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+	<script src="registration.js"></script>
+	<link rel="stylesheet" href="registration.css">
+	<title>Registration page for Students</title>
+</head>
+
+<body>
+
+	<header class="header" ng-app="SimpleApplicationApp">
+		<div class="main">
+			<div class="container">
+				<div class="row">
+					<div class="col-sm-12 col-md-10 col-lg-8 offset-lg-2 offset-md-1">
+						<div class="content">
+							<form ng-controller="RegistrationController as registration" name="registrationForm" novalidate action="/login/login.html">
+								<h2 class="form__heading text-center">Registration</h2>
+
+								<div class="form-group">
+									<label for="name" class="form__label">Your name</label>
+									<input type="text" class="form-control" id="form__name" name="name" ng-model="registration.name" required spellcheck="false" ng-blur="registration.nameValidation()">
+									<!-- ng-pattern="/^[a-zA-Z\ ]+$/"  -->
+									<span class="form__span__errors" name="registration.formspanerrorname" id="form__span__error__name"></span>
+								</div>
+
+								<div class="form-group">
+									<label for="libid" class="form__label">Library Id</label>
+									<input type="text" spellcheck="false" class="form-control" id="form__libid" name="libid" ng-model="registration.libid" required ng-blur="registration.libidValidation()">
+									<!-- ng-pattern="/^[1][6-9][1-2][0-3][C-M][A-Z][1][\d]{3}$/" -->
+									<!-- ng-if="(registrationForm.libid.$error.required || registrationForm.libid.$invalid || registrationForm.libid.$error.minlength || registrationForm.libid.$error.maxlength) && registrationForm.libid.$touched" -->
+									<span class="form__span__errors" id="form__span__error__libid"></span>
+								</div>
+
+								<div class="form-group">
+									<label for="email" class="form__label">Email address</label>
+									<input type="email" class="form-control" id="form__email" name="email" ng-model="registration.email" required>
+									<span ng-if="(registrationForm.email.$error.required || registrationForm.email.$invalid || registrationForm.email.$error.minlength || registrationForm.email.$error.maxlength) && registrationForm.email.$touched"
+										class="form__span__errors" id="form__span__error__email" ng-if="registrationForm.email.$valid">Enter
+										a valid Email</span>
+								</div>
+
+								<div class="form-group">
+									<label for="password" class="form__label">Password</label>
+									<input type="password" class="form-control" name="password" required ng-model="registration.password" ng-minlength="8" ng-maxlength="16">
+									<span ng-if="(registrationForm.password.$error.required || registrationForm.password.$error.minlength || registrationForm.password.$error.maxlength) && registrationForm.password.$touched" class="form__span__errors"
+										id="form__span__error__password"
+										ng-if="(registrationForm.libid.$error.required || registrationForm.libid.$invalid || registrationForm.libid.$error.minlength || registrationForm.libid.$error.maxlength) && registrationForm.libid.$touched">enter
+										a password of minlength of 8</span>
+								</div>
+
+								<div class="form-group">
+									<label for="confirm-password" class="form__label">Confirm Password</label>
+									<input type="password" class="form-control" id="confirm-password" name="confirmPassword" ng-model="registration.confirmPassword" ng-keyup="registration.confirmpasswordValidation()" required>
+									<span class="form__span__errors" id="form__span__error__confirmpassword"></span>
+								</div>
+
+								<div class="d-flex justify-content-center">
+									<button type="submit" class="btn form__btn" id="button" disabled="disabled" ng-disabled="registrationForm.$invalid">Submit</button>
+								</div>
+
+							</form>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</header>
+</body>
+
+</html>
